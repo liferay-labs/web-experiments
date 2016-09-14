@@ -1,0 +1,44 @@
+{
+  "name": "web-experiments",
+  "version": "0.0.0",
+  "description": "My awesome web experiments project",
+  "license": "BSD",
+  "repository": "liferay-labs/web-experiments",
+  "engines": {
+    "node": ">=0.12.0",
+    "npm": ">=3.0.0"
+  },
+  "main": "lib/Experiment.js",
+  "jsnext:main": "src/Experiment.js",
+  "files": [
+    "lib",
+    "src",
+    "test"
+  ],
+  "scripts": {
+    "build": "gulp build",
+    "compile": "babel --presets metal -d lib/ src/",
+    "prepublish": "gulp soy && npm run compile",
+    "test": "gulp test",
+    "watch": "gulp build:watch"
+  },
+  "keywords": [
+    "metal"
+  ],
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "bootstrap": "^3.3.6",
+    "express": "^4.4.5",
+    "jquery": "^3.1.0",
+    "metal-alert": "^2.0.1",
+    "metal-soy": "^2.0.0",
+    "unique-selector": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-metal": "^4.0.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "gulp": "^3.8.11",
+    "gulp-metal": "^1.0.0"
+  }
+}

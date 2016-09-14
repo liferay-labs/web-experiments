@@ -1,0 +1,23 @@
+{namespace MenuImage}
+
+/**
+ * This renders the component's whole content.
+ * @param image
+ * @param position
+ *
+ * Function references
+ * @param onChangeImageSrc
+ */
+{template .render}
+	<div class="menu" style="left: {$position.x}px; top: {$position.y}px;">
+		<ul>
+			<li class="header">Image &lt;img&gt;</li>
+			<li>
+				<label>
+					Change Image:
+					<input type="text" value="{$image.src}" data-onchange="{$onChangeImageSrc}"></input>
+				</label>
+			</li>
+		</ul>
+	</div>
+{/template}

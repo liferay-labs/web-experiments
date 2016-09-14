@@ -1,0 +1,13 @@
+{namespace ExperimentIframe}
+
+/**
+ * This renders the component's whole content.
+ * Function references
+ * @param targetUrl
+ */
+{template .render}
+	{if $targetUrl}
+		<iframe class="experiment-target" src="{$targetUrl}" data-onload="iframeLoaded_"></iframe>
+	{/if}
+{/template}
+

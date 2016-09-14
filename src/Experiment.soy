@@ -1,0 +1,27 @@
+{namespace Experiment}
+
+/**
+ * This renders the component's whole content.
+ * Function references
+ * @param onTargetUrl_
+ */
+{template .render}
+	<div id="experiment" class="experiment">
+		<div class="management-bar row">
+			<div class="col-md-2 text-center">
+				<h5>Experiment</h5>
+			</div>
+			<div class="col-md-8 text-center">
+				{call Input.render}
+					{param label: 'URL' /}
+					{param events: ['valueChanged': $onTargetUrl_] /}
+				{/call}
+			</div>
+			<div class="col-md-2 text-center">
+				<button data-onclick="storeChanges_" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+
+		<div class="iframe-container"></div>
+	</div>
+{/template}

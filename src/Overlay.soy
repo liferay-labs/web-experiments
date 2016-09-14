@@ -1,0 +1,28 @@
+{namespace Overlay}
+
+/**
+ * This renders the component's whole content.
+ * @param style
+ *
+ * Function references
+ *
+ */
+{template .render}
+	{let $styleAttributes kind="attributes"}
+		style="
+		{$style['background-color'] ? 'background-color:' + $style['background-color'] + ';': ''}
+		{$style.bottom ? 'bottom:' + $style.bottom + ';': ''}
+		{$style.display ? 'display:' + $style.display + ';' : ''}
+		{$style.height ? 'height:' + $style.height + ';' : ''}
+		{$style.left ? 'left:' + $style.left + ';' : ''}
+		{$style.opacity ? 'opacity:' + $style.opacity + ';': ''}
+		{$style.position ? 'position:' + $style.position + ';' : ''}
+		{$style.right ? 'right:' + $style.right + ';' : ''}
+		{$style.top ? 'top:' + $style.top + ';' : ''}
+		{$style.width ? 'width:' + $style.width + ';' : ''}
+		"
+	{/let}
+	<div class="overlay-container" {$styleAttributes}>
+		<div class="overlay"></div>
+	</div>
+{/template}

@@ -1,0 +1,11 @@
+{namespace Input}
+
+/**
+ * This renders the component's whole content.
+ * @param? label
+ * @param? value
+ *
+ */
+{template .render}
+	<input class="form-control" data-onchange="updateValue" placeholder="{$label}" type="text" value="{$value ? $value : ''}"></input>
+{/template}

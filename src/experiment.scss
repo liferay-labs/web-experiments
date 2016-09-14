@@ -1,0 +1,48 @@
+body {
+	overflow-y: hidden;
+}
+
+.alert {
+	position: absolute;
+	width: 100%;
+}
+
+.experiment-element {
+	position: relative;
+}
+
+.experiment .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.management-bar {
+	background-color: #EFEFEF;
+	padding: 20px 0;
+}
+
+.iframe-container, .iframe-container .experiment-target {
+		height: 100%;
+		overflow-y: hidden;
+		position: absolute;
+		width: 100%;
+}
+
+.iframe-container {
+	.experiment-target {
+		border: none;
+	}
+}
+
+.overlay-container {
+	border: 2px solid #3875D7;
+	display: none;
+	position: absolute;
+
+	.overlay {
+		background-color: #3875D7;
+		height: 100%;
+		opacity: 0.2;
+		width: 100%;
+	}
+}
